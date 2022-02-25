@@ -1,0 +1,106 @@
+package main;
+
+import java.util.Scanner;
+
+public class aula1 {
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		System.out.println("Bem vindo a pizzaria BellaRoma");
+		System.out.println("Monte sua pizza:");
+		
+		byte size = 0;
+		do {
+		System.out.println("Escolha um tamanho:");
+		System.out.println("1- GIGANTE");
+		System.out.println("2- GRANDE");
+		System.out.println("3- MÉDIA");
+		Scanner tamanho = new Scanner(System.in);
+		size = tamanho.nextByte();
+		} while ((size > 3) | (size < 1));
+		
+		String tamanhoPizza;
+		switch (size) {
+		case 1:
+			tamanhoPizza = "Gigante";
+			break;
+		case 2:
+			tamanhoPizza = "Grande";
+			break;
+		case 3:
+			tamanhoPizza = "Média";
+			break;
+
+		default:
+			tamanhoPizza = "Outro Tamanho";
+			break;
+		}
+		
+		int nSabores = 0;
+		do {
+			System.out.println("A pizza terá quantos sabores?");
+			System.out.println("1- um sabor");
+			System.out.println("2- dois sabores");
+			Scanner numeroSabores = new Scanner(System.in);
+			nSabores = numeroSabores.nextInt();
+		} while ((nSabores > 2) | (nSabores < 1));
+
+			System.out.println("Escolha um sabor:");
+			System.out.println("1- calabresa");
+			System.out.println("2- portuguesa");
+			System.out.println("3- quatro queijos");
+			Scanner sabor = new Scanner(System.in);
+			int Sabor = sabor.nextInt();
+			
+		String saborPizza1;
+		
+		switch (Sabor) {
+		case 1:
+			saborPizza1 = "Calabresa";
+			break;
+		case 2:
+			saborPizza1 = "Portuguesa";
+			break;
+		case 3:
+			saborPizza1 = "Quatro Queijos";
+			break;
+
+		default:
+			saborPizza1 = "Outro Sabor";
+			break;
+		}
+			
+		 if (nSabores == 2) {
+			System.out.println("Escolha outro sabor:");
+			System.out.println("1- calabresa");
+			System.out.println("2- portuguesa");
+			System.out.println("3- quatro queijos");
+			Sabor = sabor.nextInt();
+			sabor.close();
+		}
+		
+		 String saborPizza2;
+		 
+		 switch (Sabor) {
+			case 1:
+				saborPizza2 = "Calabresa";
+				break;
+			case 2:
+				saborPizza2 = "Portuguesa";
+				break;
+			case 3:
+				saborPizza2 = "Quatro Queijos";
+				break;
+
+			default:
+				saborPizza2 = "Outro Sabor";
+				break;
+			}
+		 
+		 System.out.printf("Pizza de tamanho %s, com %d sabor(es): \n %s", tamanhoPizza, nSabores, saborPizza1);
+		 if (nSabores == 2) {
+		 System.out.printf(" e %s", saborPizza2);
+		 };
+
+		 sabor.close();
+	}
+}
