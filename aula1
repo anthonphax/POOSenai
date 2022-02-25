@@ -1,0 +1,35 @@
+package javaapplication1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Anthon
+ */
+public class JavaApplication1 {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Olá! Digite seu nome:");
+        Scanner nome = new Scanner(System.in);
+        String n = nome.next(); 
+        
+        System.out.println("Digite quanto você ganha por hora:");
+        Scanner salarioHora = new Scanner(System.in);
+        double x = salarioHora.nextDouble();
+        
+        System.out.println("quantas horas você trabalhou esse mês?");
+        Scanner horasMes = new Scanner(System.in);
+        double y = horasMes.nextInt();
+        
+        double salarioTotal = x * y;
+        
+        System.out.format("%s você recebeu R$%.2f esse mês\n", n, salarioTotal);
+        
+        salarioHora.close();
+        horasMes.close();
+        nome.close();
+        
+    }   
+}
