@@ -1,0 +1,14 @@
+    public static void main(String[] args) {
+    //1
+        System.out.println("Hello World");
+        System.out.println("!!!!!!!!!!!");
+        System.out.println("!!!!\n!!!!!!!"); //pula uma linha
+        System.out.println("!!!!!!\t!!!!!"); // dá um espaço
+        System.out.println("!!!!!!!!!\f!!"); //seta para cima
+        System.out.println("Hello\b!"); //não mostra o caracter anterior ao \b
+        System.out.println("\\");
+        System.out.println("\'");
+        System.out.println("\"");
+    //2
+        int i = 0;
+    }
